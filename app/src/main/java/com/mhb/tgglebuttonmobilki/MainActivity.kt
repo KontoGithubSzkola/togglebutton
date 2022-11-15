@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var przyciski: List<ToggleButton> = listOf(
+        val przyciski: List<ToggleButton> = listOf(
             findViewById<ToggleButton>(R.id.t1),
             findViewById<ToggleButton>(R.id.t2),
             findViewById<ToggleButton>(R.id.t3),
@@ -22,54 +22,44 @@ class MainActivity : AppCompatActivity() {
             findViewById<ToggleButton>(R.id.t9)
         )
         /* 1 3 6 2 8 4 9 5 7*/
-        var loso= mutableListOf<Int>()
-            var o = 0
+        val loso = mutableListOf<Int>()
+        var o = 0
         var losowa = 0
-     while(loso.size >= 8) {
+        while (loso.size >= 8) {
             losowa = Random.nextInt(0, 8)
             if (o == 9) {
                 o = loso.size
             } else {
                 o += 1
             }
-            if (losowa == loso[0]){}
-            else {
+            if (losowa != loso[0]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[1]){}
-            else {
+            if (losowa != loso[1]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[2]){}
-            else {
+            if (losowa != loso[2]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[3]){}
-            else {
+            if (losowa != loso[3]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[4]){}
-            else {
+            if (losowa != loso[4]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[5]){}
-            else {
+            if (losowa != loso[5]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[6]){}
-            else {
+            if (losowa != loso[6]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[7]){}
-            else {
+            if (losowa != loso[7]) {
                 loso[o] = losowa
             }
-            if (losowa == loso[8]){}
-            else {
-                loso[o] = losowa
+            if (losowa != loso[8]) {
+            loso[o] = losowa
             }
-        }
-
+    }
 
         var jestGit = 0
         przyciski[0].setOnClickListener { jestGit = 1 }
